@@ -28,5 +28,9 @@ class PostsController < ApplicationController
     redirect_to @posts
   end
 
+  def update
+
+  end
+
 
 end
