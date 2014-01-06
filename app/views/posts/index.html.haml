@@ -1,0 +1,17 @@
+%h1 Here are some Posts
+%table
+  %tr
+    %th Important Content
+    %th Intriguing Snippet
+
+  - @posts.each do |post|
+    %tr
+      %td= post.body
+      %td= post.title
+      %td= link_to 'Show', post
+      %td= link_to 'Edit', edit_post_path(post)
+      %td= link_to 'Destroy', post, :method => :delete, :data => { confirm: 'Really? This would delete all posts, I think.' }
+
+%br
+
+= link_to 'New Post', new_post_path
